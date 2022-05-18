@@ -26,8 +26,25 @@ class _ViewProductState extends State<ViewProduct> {
         ),
         SafeArea(
             child: Column(
-          children: const [
-            Text('data'),
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(24),
+              child: Column(
+                children: [
+                  Row(
+                    children: const [
+                      Icon(Icons.arrow_back),
+                      Text("Fix Microeave")
+                    ],
+                  ),
+                  Image.asset(microwave)
+                ],
+              ),
+            ),
+            Column(),
+            Column(
+              children: [Container(), Container()],
+            )
           ],
         )),
       ]),
