@@ -102,7 +102,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     height: 8,
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () => Navigator.of(context).push(
+                        MaterialPageRoute(
+                            builder: (context) => const ViewCart())),
                     child: const Text(
                       'Sign up',
                       style: TextStyle(color: Colors.white),
