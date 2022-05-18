@@ -17,8 +17,8 @@ samples, guidance on mobile development, and a full API reference.
 
 <img src='https://github.com/usseiin/SH_CapstoneProj2/blob/3c1612ecaca7ef7d893e44c863ed40a31684fbcd/ScreenShot/Screenshot0.png'>
 
-https://github.com/usseiin/SH_CapstoneProj2/blob/3c1612ecaca7ef7d893e44c863ed40a31684fbcd/ScreenShot/Screenshot1.png
+<img src='https://github.com/usseiin/SH_CapstoneProj2/blob/3c1612ecaca7ef7d893e44c863ed40a31684fbcd/ScreenShot/Screenshot1.png'>
 
-https://github.com/usseiin/SH_CapstoneProj2/blob/3c1612ecaca7ef7d893e44c863ed40a31684fbcd/ScreenShot/Screenshot2.png
+<img src='https://github.com/usseiin/SH_CapstoneProj2/blob/3c1612ecaca7ef7d893e44c863ed40a31684fbcd/ScreenShot/Screenshot2.png'>
 
-https://github.com/usseiin/SH_CapstoneProj2/blob/3c1612ecaca7ef7d893e44c863ed40a31684fbcd/ScreenShot/Screenshot3.png
+<img src='https://github.com/usseiin/SH_CapstoneProj2/blob/3c1612ecaca7ef7d893e44c863ed40a31684fbcd/ScreenShot/Screenshot3.png'>
