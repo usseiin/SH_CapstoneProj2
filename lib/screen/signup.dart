@@ -5,6 +5,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:repair_home_66/screen/view_cart.dart';
 
+import '../widgets/constant.dart';
+
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
 
@@ -38,10 +40,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SvgPicture.asset(
-                    "images/logo1.svg",
-                    color: const Color.fromARGB(255, 31, 49, 157),
+                    image_svg,
+                    color: main_color,
                   ),
-                  const Text("REPAIR HOME"),
+                  Text(image_svg),
                   const SizedBox(
                     height: 8,
                   ),

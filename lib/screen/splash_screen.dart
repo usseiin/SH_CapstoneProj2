@@ -3,6 +3,7 @@ import 'dart:async';
 import "package:flutter/material.dart";
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../widgets/constant.dart';
 import 'login.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -24,19 +25,19 @@ class _SplashScreenState extends State<SplashScreen> {
           )),
     );
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 31, 49, 157),
+      backgroundColor: main_color,
       body: SafeArea(
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SvgPicture.asset(
-                "images/logo1.svg",
+                image_svg,
                 width: 120,
-              ), // SvgPicture.asset("images/logo1.svg"),
-              const Text(
-                "REPAIR HOME",
-                style: TextStyle(
+              ), // SvgPicture.asset(image_svg),
+              Text(
+                image_svg,
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 24,
                 ),

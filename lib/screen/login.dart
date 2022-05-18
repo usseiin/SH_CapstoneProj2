@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:repair_home_66/screen/signup.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:repair_home_66/widgets/constant.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -21,9 +22,9 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Transform.scale(
               scale: 1.3,
               child: Container(
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                     image: DecorationImage(
-                  image: AssetImage("images/logo1.png"),
+                  image: AssetImage(image_png),
                   fit: BoxFit.contain,
                 )),
               ),
@@ -37,10 +38,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SvgPicture.asset(
-                      "images/logo1.svg",
-                      color: const Color.fromARGB(255, 31, 49, 157),
+                      image_svg,
+                      color: main_color,
                     ),
-                    const Text("REPAIR HOME"),
+                    Text(image_svg),
                     const SizedBox(
                       height: 8,
                     ),
