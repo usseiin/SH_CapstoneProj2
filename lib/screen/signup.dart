@@ -39,6 +39,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  const Expanded(
+                    child: SizedBox(),
+                    flex: 1,
+                  ),
                   SvgPicture.asset(
                     image_svg,
                     color: main_color,
@@ -104,40 +108,36 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
-                  Column(
-                    children: [
-                      const Text(". Or sign up with ."),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          IconButton(
-                            onPressed: () {},
-                            icon: const FaIcon(
-                              FontAwesomeIcons.google,
-                              size: 25,
+                  Expanded(
+                    flex: 1,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        const Text(". Or sign up with ."),
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 8.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                SvgPicture.asset(
+                                  "images/google.svg",
+                                  width: 25,
+                                ),
+                                SvgPicture.asset(
+                                  "images/facebook.svg",
+                                  height: 25,
+                                ),
+                                SvgPicture.asset(
+                                  "images/twitter.svg",
+                                  width: 25,
+                                ),
+                              ],
                             ),
                           ),
-                          const SizedBox(width: 5),
-                          IconButton(
-                            onPressed: () {},
-                            icon: const FaIcon(
-                              FontAwesomeIcons.facebookSquare,
-                              size: 25,
-                            ),
-                          ),
-                          const SizedBox(width: 5),
-                          IconButton(
-                            onPressed: () => Navigator.of(context).push(
-                                MaterialPageRoute(
-                                    builder: (context) => const ViewCart())),
-                            icon: const FaIcon(
-                              FontAwesomeIcons.twitterSquare,
-                              size: 25,
-                            ),
-                          ),
-                        ],
-                      )
-                    ],
+                        )
+                      ],
+                    ),
                   ),
                 ],
               ),

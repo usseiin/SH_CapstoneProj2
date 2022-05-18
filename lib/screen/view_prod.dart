@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:repair_home_66/widgets/constant.dart';
 
 class ViewProduct extends StatefulWidget {
@@ -34,16 +35,58 @@ class _ViewProductState extends State<ViewProduct> {
                   Row(
                     children: const [
                       Icon(Icons.arrow_back),
-                      Text("Fix Microeave")
+                      Text("Fix Microwave")
                     ],
                   ),
                   Image.asset(microwave)
                 ],
               ),
             ),
-            Column(),
-            Column(
-              children: [Container(), Container()],
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Container(
+                  child: const Text("Review"),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                ),
+                IconButton(onPressed: () {}, icon: const Icon(Icons.comment))
+              ],
+            ),
+            Row(),
+            Row(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                  alignment: Alignment.center,
+                  child: const Text(
+                    "Order Repair",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                ),
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                  alignment: Alignment.center,
+                  child: const Text("Order Setup"),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                ),
+              ],
             )
           ],
         )),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:repair_home_66/screen/view_prod.dart';
 import 'package:repair_home_66/widgets/constant.dart';
 
 class ViewCart extends StatefulWidget {
@@ -82,20 +83,25 @@ class _ViewCartState extends State<ViewCart> {
                           ],
                         ),
                       ),
-                      Container(
-                        alignment: Alignment.center,
-                        child: const Text(
-                          "Make an Order",
-                          style: TextStyle(color: Colors.white),
-                          textAlign: TextAlign.center,
+                      GestureDetector(
+                        onTap: () => Navigator.of(context).push(
+                            MaterialPageRoute(
+                                builder: (context) => const ViewProduct())),
+                        child: Container(
+                          alignment: Alignment.center,
+                          child: const Text(
+                            "Make an Order",
+                            style: TextStyle(color: Colors.white),
+                            textAlign: TextAlign.center,
+                          ),
+                          constraints: const BoxConstraints(
+                            minWidth: double.infinity,
+                            minHeight: 50.0,
+                          ),
+                          decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(5)),
                         ),
-                        constraints: const BoxConstraints(
-                          minWidth: double.infinity,
-                          minHeight: 50.0,
-                        ),
-                        decoration: BoxDecoration(
-                            color: Colors.black,
-                            borderRadius: BorderRadius.circular(5)),
                       )
                     ],
                   ),

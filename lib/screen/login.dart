@@ -37,6 +37,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    const Expanded(
+                      child: SizedBox(),
+                      flex: 1,
+                    ),
                     SvgPicture.asset(
                       image_svg,
                       color: main_color,
@@ -93,54 +97,48 @@ class _LoginScreenState extends State<LoginScreen> {
                     Column(
                       children: [
                         const Text(". Or sign in with ."),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            IconButton(
-                              onPressed: () {},
-                              icon: const FaIcon(
-                                FontAwesomeIcons.google,
-                                size: 25,
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 8.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              SvgPicture.asset(
+                                "images/google.svg",
+                                width: 25,
                               ),
-                            ),
-                            const SizedBox(width: 5),
-                            IconButton(
-                              onPressed: () {},
-                              icon: const FaIcon(
-                                FontAwesomeIcons.facebookSquare,
-                                size: 25,
+                              SvgPicture.asset(
+                                "images/facebook.svg",
+                                height: 25,
                               ),
-                            ),
-                            const SizedBox(width: 5),
-                            IconButton(
-                              onPressed: () {},
-                              icon: const FaIcon(
-                                FontAwesomeIcons.twitterSquare,
-                                size: 25,
+                              SvgPicture.asset(
+                                "images/twitter.svg",
+                                width: 25,
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         )
                       ],
                     ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Text("Dont have an account? "),
-                            GestureDetector(
-                              onTap: () => Navigator.of(context).push(
-                                MaterialPageRoute(
-                                  builder: (context) => const SignUpScreen(),
+                    Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Text("Dont have an account? "),
+                              GestureDetector(
+                                onTap: () => Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (context) => const SignUpScreen(),
+                                  ),
                                 ),
+                                child: const Text("Sign up"),
                               ),
-                              child: const Text("Sign up"),
-                            ),
-                          ],
-                        ),
-                      ],
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
