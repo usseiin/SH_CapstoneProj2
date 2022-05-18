@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:repair_home_66/screen/signup.dart';
-import 'package:repair_home_66/widgets/widgets.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -41,14 +41,47 @@ class _LoginScreenState extends State<LoginScreen> {
                       color: const Color.fromARGB(255, 31, 49, 157),
                     ),
                     const Text("REPAIR HOME"),
+                    const SizedBox(
+                      height: 8,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: const [
                         Text("Login to your account"),
                       ],
                     ),
-                    textField("Email"),
-                    textField("Password"),
+                    const Card(
+                      child: Padding(
+                        padding: EdgeInsets.all(4),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: "email",
+                            border:
+                                OutlineInputBorder(borderSide: BorderSide.none),
+                          ),
+                          obscureText: false,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 4,
+                    ),
+                    const Card(
+                      child: Padding(
+                        padding: EdgeInsets.all(4),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: "password",
+                            border:
+                                OutlineInputBorder(borderSide: BorderSide.none),
+                          ),
+                          obscureText: true,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 8,
+                    ),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text(
@@ -64,15 +97,24 @@ class _LoginScreenState extends State<LoginScreen> {
                           children: [
                             IconButton(
                               onPressed: () {},
-                              icon: const Icon(Icons.account_box),
+                              icon: const FaIcon(
+                                FontAwesomeIcons.google,
+                                size: 50,
+                              ),
                             ),
                             IconButton(
                               onPressed: () {},
-                              icon: const Icon(Icons.facebook),
+                              icon: const FaIcon(
+                                FontAwesomeIcons.facebookSquare,
+                                size: 50,
+                              ),
                             ),
                             IconButton(
                               onPressed: () {},
-                              icon: const Icon(Icons.telegram),
+                              icon: const FaIcon(
+                                FontAwesomeIcons.twitterSquare,
+                                size: 50,
+                              ),
                             ),
                           ],
                         )
