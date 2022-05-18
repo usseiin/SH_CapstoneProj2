@@ -19,16 +19,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(24.0),
+        padding: const EdgeInsets.all(16.0),
         child: Stack(children: [
           Transform.translate(
             offset: const Offset(130, -180),
             child: Transform.scale(
               scale: 1.3,
               child: Container(
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                     image: DecorationImage(
-                  image: AssetImage("images/logo1.png"),
+                  image: AssetImage(image_png),
                   fit: BoxFit.contain,
                 )),
               ),
@@ -43,7 +43,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     image_svg,
                     color: main_color,
                   ),
-                  Text(image_svg),
+                  Text(repair_home),
                   const SizedBox(
                     height: 8,
                   ),

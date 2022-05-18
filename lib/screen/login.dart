@@ -31,7 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(16.0),
             child: SafeArea(
               child: Center(
                 child: Column(
@@ -41,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       image_svg,
                       color: main_color,
                     ),
-                    Text(image_svg),
+                    Text(repair_home),
                     const SizedBox(
                       height: 8,
                     ),

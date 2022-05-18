@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 width: 120,
               ), // SvgPicture.asset(image_svg),
               Text(
-                image_svg,
+                repair_home,
                 style: const TextStyle(
                   color: Colors.white,
                   fontSize: 24,
