@@ -1,7 +1,8 @@
-import 'dart:ffi';
+// import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:repair_home_66/screen/view_cart.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -52,7 +53,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                   const Card(
                     child: Padding(
-                      padding: EdgeInsets.all(4.0),
+                      padding: EdgeInsets.only(left: 4),
                       child: TextField(
                         decoration: InputDecoration(
                           hintText: "email",
@@ -66,7 +67,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   const SizedBox(height: 4),
                   const Card(
                     child: Padding(
-                      padding: EdgeInsets.all(4.0),
+                      padding: EdgeInsets.only(left: 4),
                       child: TextField(
                         decoration: InputDecoration(
                           hintText: "password",
@@ -80,7 +81,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   const SizedBox(height: 4),
                   const Card(
                     child: Padding(
-                      padding: EdgeInsets.all(4.0),
+                      padding: EdgeInsets.only(left: 4),
                       child: TextField(
                         decoration: InputDecoration(
                           hintText: "confirm email",
@@ -95,9 +96,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     height: 8,
                   ),
                   ElevatedButton(
-                    style: ButtonStyle(
-                        padding: MaterialStateProperty.all(
-                            EdgeInsets.symmetric(horizontal: 500))),
                     onPressed: () {},
                     child: const Text(
                       'Sign up',
@@ -112,21 +110,28 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         children: [
                           IconButton(
                             onPressed: () {},
-                            icon: const Icon(Icons.account_box),
+                            icon: const FaIcon(
+                              FontAwesomeIcons.google,
+                              size: 25,
+                            ),
                           ),
+                          const SizedBox(width: 5),
                           IconButton(
                             onPressed: () {},
-                            icon: const Icon(Icons.facebook),
+                            icon: const FaIcon(
+                              FontAwesomeIcons.facebookSquare,
+                              size: 25,
+                            ),
                           ),
+                          const SizedBox(width: 5),
                           IconButton(
-                            onPressed: () {
-                              Navigator.of(context).push(
+                            onPressed: () => Navigator.of(context).push(
                                 MaterialPageRoute(
-                                  builder: (context) => const ViewCart(),
-                                ),
-                              );
-                            },
-                            icon: const Icon(Icons.telegram),
+                                    builder: (context) => const ViewCart())),
+                            icon: const FaIcon(
+                              FontAwesomeIcons.twitterSquare,
+                              size: 25,
+                            ),
                           ),
                         ],
                       )

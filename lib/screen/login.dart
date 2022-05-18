@@ -30,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(24.0),
+            padding: const EdgeInsets.all(8.0),
             child: SafeArea(
               child: Center(
                 child: Column(
@@ -52,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     const Card(
                       child: Padding(
-                        padding: EdgeInsets.all(4),
+                        padding: EdgeInsets.only(left: 4),
                         child: TextField(
                           decoration: InputDecoration(
                             hintText: "email",
@@ -68,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     const Card(
                       child: Padding(
-                        padding: EdgeInsets.all(4),
+                        padding: EdgeInsets.only(left: 4),
                         child: TextField(
                           decoration: InputDecoration(
                             hintText: "password",
@@ -99,38 +99,45 @@ class _LoginScreenState extends State<LoginScreen> {
                               onPressed: () {},
                               icon: const FaIcon(
                                 FontAwesomeIcons.google,
-                                size: 50,
+                                size: 25,
                               ),
                             ),
+                            const SizedBox(width: 5),
                             IconButton(
                               onPressed: () {},
                               icon: const FaIcon(
                                 FontAwesomeIcons.facebookSquare,
-                                size: 50,
+                                size: 25,
                               ),
                             ),
+                            const SizedBox(width: 5),
                             IconButton(
                               onPressed: () {},
                               icon: const FaIcon(
                                 FontAwesomeIcons.twitterSquare,
-                                size: 50,
+                                size: 25,
                               ),
                             ),
                           ],
                         )
                       ],
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        const Text("Dont have an account? "),
-                        GestureDetector(
-                          onTap: () => Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => const SignUpScreen(),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text("Dont have an account? "),
+                            GestureDetector(
+                              onTap: () => Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => const SignUpScreen(),
+                                ),
+                              ),
+                              child: const Text("Sign up"),
                             ),
-                          ),
-                          child: const Text("Sign up"),
+                          ],
                         ),
                       ],
                     ),
