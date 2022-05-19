@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
-import 'package:repair_home_66/screen/splash_screen.dart';
+
+import 'screen/splash_screen.dart';
 //import "../pages/home.dart";
 
 void main(List<String> args) {
